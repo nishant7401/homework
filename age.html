@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="result"></div>
+    <br />
+
+    <input type="number" id="age" placeholder="enter your age" />
+    <button id="checkButton">Check</button>
+
+    <script>
+      let age = document.getElementById("age");
+      let result = document.getElementById("result");
+      let checkButton = document.getElementById("checkButton");
+
+      checkButton.addEventListener("click", function () {
+        if (age.value >= 18 && age.value < 25) {
+          result.innerHTML = "You can only drink coke";
+        } else if (age.value >= 25 && age.value < 35) {
+          result.innerHTML = "You can only drink beer";
+        } else if (age.value >= 35 && age.value < 40) {
+          result.innerHTML = "You can drink anything";
+        } else {
+          result.innerHTML = "Please enter a valid age";
+        }
+      });
+    </script>
+  </body>
+</html>
